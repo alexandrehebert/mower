@@ -4,5 +4,5 @@
 Le test à executer se trouve ici :
 > /src/test/java/com/xebia/mower/MainMowerTest.java : testMainMower
 -------------------------------------------------------------------------------
-															by Alexandre HEBERT
+                                                            by Alexandre HEBERT
 -------------------------------------------------------------------------------

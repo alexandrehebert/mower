@@ -37,59 +37,59 @@ public interface MowerAction {
      */
     public static final class MowerActionContext {
 
-	/** The mower. */
-	private Mower mower;
+        /** The mower. */
+        private Mower mower;
 
-	/** The action. */
-	private Character action;
+        /** The action. */
+        private Character action;
 
-	/** The lawn. */
-	private RectangularLawn lawn;
+        /** The lawn. */
+        private RectangularLawn lawn;
 
-	/**
-	 * Instantiates a new mower action context.
-	 * 
-	 * @param mower
-	 *            the mower
-	 * @param action
-	 *            the action
-	 * @param lawn
-	 *            the lawn
-	 */
-	public MowerActionContext(Mower mower, Character action,
-		RectangularLawn lawn) {
-	    super();
-	    this.mower = mower;
-	    this.action = action;
-	    this.lawn = lawn;
-	}
+        /**
+         * Instantiates a new mower action context.
+         * 
+         * @param mower
+         *            the mower
+         * @param action
+         *            the action
+         * @param lawn
+         *            the lawn
+         */
+        public MowerActionContext(Mower mower, Character action,
+                RectangularLawn lawn) {
+            super();
+            this.mower = mower;
+            this.action = action;
+            this.lawn = lawn;
+        }
 
-	/**
-	 * Gets the mower.
-	 * 
-	 * @return the mower
-	 */
-	public Mower getMower() {
-	    return mower;
-	}
+        /**
+         * Gets the mower.
+         * 
+         * @return the mower
+         */
+        public Mower getMower() {
+            return mower;
+        }
 
-	/**
-	 * Gets the command.
-	 * 
-	 * @return the command
-	 */
-	public Character getAction() {
-	    return action;
-	}
+        /**
+         * Gets the command.
+         * 
+         * @return the command
+         */
+        public Character getAction() {
+            return action;
+        }
 
-	/**
-	 * Gets the lawn.
-	 * 
-	 * @return the lawn
-	 */
-	public RectangularLawn getLawn() {
-	    return lawn;
-	}
+        /**
+         * Gets the lawn.
+         * 
+         * @return the lawn
+         */
+        public RectangularLawn getLawn() {
+            return lawn;
+        }
 
     }
 

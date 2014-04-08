@@ -20,24 +20,24 @@ public class PowerMowerTest {
 
     @Before
     public void setUp() {
-	mower = new PowerMower(4, 4, Orientation.N);
-	lawn = new PowerLawn(LAWN_WIDTH, LAWN_HEIGHT);
+        mower = new PowerMower(4, 4, Orientation.N);
+        lawn = new PowerLawn(LAWN_WIDTH, LAWN_HEIGHT);
     }
 
     @Test
     public void testMove() {
-	mower.move(lawn);
-	// ne peut pas sortir des limites de la pelouse
-	Assert.assertEquals(4, mower.getY());
-	Assert.assertEquals(4, mower.getX());
+        mower.move(lawn);
+        // ne peut pas sortir des limites de la pelouse
+        Assert.assertEquals(4, mower.getY());
+        Assert.assertEquals(4, mower.getX());
     }
 
     @Test
     public void testRotate() {
-	mower.rotate(Direction.D);
-	Assert.assertEquals(Orientation.E, mower.getOrientation());
-	mower.rotate(Direction.G);
-	Assert.assertEquals(Orientation.N, mower.getOrientation());
+        mower.rotate(Direction.D);
+        Assert.assertEquals(Orientation.E, mower.getOrientation());
+        mower.rotate(Direction.G);
+        Assert.assertEquals(Orientation.N, mower.getOrientation());
     }
 
 }

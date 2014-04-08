@@ -19,10 +19,10 @@ public class PowerLawn implements RectangularLawn {
      *            the height
      */
     public PowerLawn(int width, int height) {
-	assert width > 0;
-	assert height > 0;
-	this.width = width;
-	this.height = height;
+        assert width > 0;
+        assert height > 0;
+        this.width = width;
+        this.height = height;
     }
 
     /*
@@ -32,7 +32,7 @@ public class PowerLawn implements RectangularLawn {
      */
     @Override
     public int getHeight() {
-	return height;
+        return height;
     }
 
     /*
@@ -42,7 +42,7 @@ public class PowerLawn implements RectangularLawn {
      */
     @Override
     public int getWidth() {
-	return width;
+        return width;
     }
 
     /*
@@ -52,7 +52,7 @@ public class PowerLawn implements RectangularLawn {
      */
     @Override
     public void mow(int x, int y) {
-	// on tond la pelouse ? :D
+        // on tond la pelouse ? :D
     }
 
 }

@@ -17,7 +17,7 @@ public class GStrategy implements MowerAction {
      */
     @Override
     public boolean select(MowerActionContext context) {
-	return context.getAction().equals('G');
+        return context.getAction().equals('G');
     }
 
     /*
@@ -29,7 +29,7 @@ public class GStrategy implements MowerAction {
      */
     @Override
     public void execute(MowerActionContext context) {
-	context.getMower().rotate(Direction.G);
+        context.getMower().rotate(Direction.G);
     }
 
 }

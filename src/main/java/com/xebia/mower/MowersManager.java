@@ -42,7 +42,7 @@ public class MowersManager {
      *            the lawn height
      */
     public MowersManager(int lawnWidth, int lawnHeight) {
-	lawn = new PowerLawn(lawnWidth, lawnHeight);
+        lawn = new PowerLawn(lawnWidth, lawnHeight);
     }
 
     /**
@@ -57,7 +57,7 @@ public class MowersManager {
      */
     public void registerAction(MowerAction mowerMoveStrategy) {
 
-	strategies.add(mowerMoveStrategy);
+        strategies.add(mowerMoveStrategy);
 
     }
 
@@ -76,14 +76,14 @@ public class MowersManager {
      * @return the mower
      */
     public Mower createAndUseMower(int mowerX, int mowerY,
-	    Orientation mowerDirection) {
+            Orientation mowerDirection) {
 
-	PowerMower mower = new PowerMower(mowerX, mowerY, mowerDirection);
-	mowers.add(mower);
+        PowerMower mower = new PowerMower(mowerX, mowerY, mowerDirection);
+        mowers.add(mower);
 
-	L.debug("new mower " + mower);
+        L.debug("new mower " + mower);
 
-	return currentMower = mower;
+        return currentMower = mower;
 
     }
 
@@ -97,25 +97,25 @@ public class MowersManager {
      */
     public void executeActions(char... actions) {
 
-	// parcours des actions à réaliser (A, G, D)
-	for (Character action : actions) {
+        // parcours des actions à réaliser (A, G, D)
+        for (Character action : actions) {
 
-	    MowerActionContext context = new MowerActionContext(currentMower,
-		    action, lawn);
+            MowerActionContext context = new MowerActionContext(currentMower,
+                    action, lawn);
 
-	    L.debug("action " + action);
+            L.debug("action " + action);
 
-	    // parcours des implémentations des actions possibles
-	    for (MowerAction strategy : strategies) {
-		// on cherche a determiner si l'action est à executer
-		if (!strategy.select(context))
-		    continue;
-		strategy.execute(context);
-	    }
+            // parcours des implémentations des actions possibles
+            for (MowerAction strategy : strategies) {
+                // on cherche a determiner si l'action est à executer
+                if (!strategy.select(context))
+                    continue;
+                strategy.execute(context);
+            }
 
-	}
+        }
 
-	System.out.println(currentMower);
+        System.out.println(currentMower);
 
     }
 

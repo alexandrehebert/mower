@@ -17,7 +17,7 @@ public class DStrategy implements MowerAction {
      */
     @Override
     public boolean select(MowerActionContext context) {
-	return context.getAction().equals('D');
+        return context.getAction().equals('D');
     }
 
     /*
@@ -29,7 +29,7 @@ public class DStrategy implements MowerAction {
      */
     @Override
     public void execute(MowerActionContext context) {
-	context.getMower().rotate(Direction.D);
+        context.getMower().rotate(Direction.D);
     }
 
 }

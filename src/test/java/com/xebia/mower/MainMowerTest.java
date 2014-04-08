@@ -11,11 +11,11 @@ public class MainMowerTest {
 
     @Test
     public void testMainMower() throws IOException {
-	String[] input = Files.readAllLines(
-		FileSystems.getDefault().getPath("src/main/resources",
-			"input.txt"), Charset.defaultCharset()).toArray(
-		new String[] {});
-	MainMower.main(input);
+        String[] input = Files.readAllLines(
+                FileSystems.getDefault().getPath("src/main/resources",
+                        "input.txt"), Charset.defaultCharset()).toArray(
+                new String[] {});
+        MainMower.main(input);
     }
 
 }

@@ -27,7 +27,7 @@ public class PowerMower implements Mower {
      * Instantiates a new power mower.
      */
     public PowerMower() {
-	this(0, 0, Orientation.N);
+        this(0, 0, Orientation.N);
     }
 
     /**
@@ -41,9 +41,9 @@ public class PowerMower implements Mower {
      *            the direction
      */
     public PowerMower(int x, int y, Orientation direction) {
-	this.x = x;
-	this.y = y;
-	this.orientation = direction;
+        this.x = x;
+        this.y = y;
+        this.orientation = direction;
     }
 
     /*
@@ -53,7 +53,7 @@ public class PowerMower implements Mower {
      */
     @Override
     public int getX() {
-	return x;
+        return x;
     }
 
     /*
@@ -63,7 +63,7 @@ public class PowerMower implements Mower {
      */
     @Override
     public int getY() {
-	return y;
+        return y;
     }
 
     /*
@@ -73,7 +73,7 @@ public class PowerMower implements Mower {
      */
     @Override
     public Orientation getOrientation() {
-	return orientation;
+        return orientation;
     }
 
     /**
@@ -86,28 +86,28 @@ public class PowerMower implements Mower {
      */
     @Override
     public Mower move(RectangularLawn lawn) {
-	L.debug("move from " + this);
-	switch (orientation) {
-	case E:
-	    if (x < lawn.getWidth() - 1)
-		x++;
-	    break;
-	case W:
-	    if (x > 0)
-		x--;
-	    break;
-	case N:
-	    if (y < lawn.getHeight() - 1)
-		y++;
-	    break;
-	case S:
-	    if (y > 0)
-		y--;
-	    break;
-	}
-	L.debug("> to " + this);
-	lawn.mow(getX(), getY());
-	return this;
+        L.debug("move from " + this);
+        switch (orientation) {
+        case E:
+            if (x < lawn.getWidth() - 1)
+                x++;
+            break;
+        case W:
+            if (x > 0)
+                x--;
+            break;
+        case N:
+            if (y < lawn.getHeight() - 1)
+                y++;
+            break;
+        case S:
+            if (y > 0)
+                y--;
+            break;
+        }
+        L.debug("> to " + this);
+        lawn.mow(getX(), getY());
+        return this;
     }
 
     /*
@@ -117,21 +117,21 @@ public class PowerMower implements Mower {
      */
     @Override
     public Orientation rotate(Direction direction) {
-	L.debug("rotate from " + this);
-	int d = Arrays.asList(Orientation.values()).indexOf(orientation);
-	switch (direction) {
-	case D: // virage à droite
-	    d = ++d % 4;
-	    break;
-	case G: // virage à gauche
-	    d--;
-	    if (d < 0)
-		d = 3;
-	    break;
-	}
-	orientation = Orientation.values()[d];
-	L.debug("> to " + this);
-	return getOrientation();
+        L.debug("rotate from " + this);
+        int d = Arrays.asList(Orientation.values()).indexOf(orientation);
+        switch (direction) {
+        case D: // virage à droite
+            d = ++d % 4;
+            break;
+        case G: // virage à gauche
+            d--;
+            if (d < 0)
+                d = 3;
+            break;
+        }
+        orientation = Orientation.values()[d];
+        L.debug("> to " + this);
+        return getOrientation();
     }
 
     /*
@@ -141,7 +141,7 @@ public class PowerMower implements Mower {
      */
     @Override
     public String toString() {
-	return x + " " + y + " " + orientation;
+        return x + " " + y + " " + orientation;
     }
 
 }

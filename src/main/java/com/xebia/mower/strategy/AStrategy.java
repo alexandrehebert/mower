@@ -15,7 +15,7 @@ public class AStrategy implements MowerAction {
      */
     @Override
     public boolean select(MowerActionContext context) {
-	return context.getAction().equals('A');
+        return context.getAction().equals('A');
     }
 
     /*
@@ -27,7 +27,7 @@ public class AStrategy implements MowerAction {
      */
     @Override
     public void execute(MowerActionContext context) {
-	context.getMower().move(context.getLawn());
+        context.getMower().move(context.getLawn());
     }
 
 }

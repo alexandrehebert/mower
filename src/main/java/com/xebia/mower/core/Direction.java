@@ -5,10 +5,10 @@ package com.xebia.mower.core;
  */
 public enum Direction {
 
-	/** The Droite. */
-	D,
+    /** The Droite. */
+    D,
 
-	/** The Gauche. */
-	G;
+    /** The Gauche. */
+    G;
 
 }

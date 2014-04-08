@@ -33,8 +33,8 @@ public class MainMower {
 
         // calcul des dimensions de la pelouse
         String[] lawnDimensions = args[0].split(SETTINGS_SEPARATOR);
-        int lawnWidth = Integer.parseInt(lawnDimensions[0]);
-        int lawnHeight = Integer.parseInt(lawnDimensions[1]);
+        int lawnWidth = Integer.parseInt(lawnDimensions[0]) + 1;
+        int lawnHeight = Integer.parseInt(lawnDimensions[1]) + 1;
         // String[] inputs = Arrays.copyOfRange(args, 1, args.length-1);
 
         MowersManager manager = new MowersManager(lawnWidth, lawnHeight);
@@ -49,8 +49,8 @@ public class MainMower {
 
             // calcul des paramètres de départ de la tondeuse
             String[] mowerSettings = args[i].split(SETTINGS_SEPARATOR);
-            int mowerX = Integer.parseInt(mowerSettings[0]) + 1;
-            int mowerY = Integer.parseInt(mowerSettings[1]) + 1;
+            int mowerX = Integer.parseInt(mowerSettings[0]) ;
+            int mowerY = Integer.parseInt(mowerSettings[1]);
             Orientation mowerDirection = Orientation.valueOf(mowerSettings[2]);
 
             manager.createAndUseMower(mowerX, mowerY, mowerDirection);
